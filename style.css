@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #000000;
+    color: #ffffff; 
+}
+*::selection{
+    background-color: #000000; 
+    color: #ffffff; 
+}
+
+#nav{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 99;
+    color: white;
+}
+#nav img{
+    width: 100px; 
+  height: 100px; 
+  overflow: hidden; 
+  position: relative; 
+
+}
+#nav #nav2{
+    color: #ffffff;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px
+
+}
+#nav2  a{
+    text-decoration: none;
+    color: beige;
+    font-weight: 400;
+    font-size: 25px;
+}
+#cursor {
+    height: 180px;
+    width: 180px;
+    background-color: rgba(201, 181, 193, 0.814);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: none; /* Prevent the cursor from interfering with mouse events */
+    z-index: 1000; /* Make sure it is on top of other elements */
+}
+
+#page1{
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 3vh;
+    padding-top:15vh ;
+    background-color: #000000;
+}
+#page1 h1{
+    font-size: 15.4vw;
+    font-family: futura;
+    text-transform: uppercase;
+    line-height: 28vh;
+    letter-spacing: -5px;
+}
+#video-container{
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+    margin-top: 1vw;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-container #play{
+    padding: 3vw 2.2vw;
+    background-color: black;
+    color: #ffff;
+    font-size: 1.3vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: futura;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+    background-color: #000000;
+
+}
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    position: relative;
+}
+#page2 .elem img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+#page2 .elem .dets{
+    height: 20px;
+    border-radius: 20%;
+    width: 50%;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(178, 171, 171);
+}
+#page2 .elem .dets:hover{
+    height: 200px;
+    color: #000000;
+}
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #000000;
+    flex-wrap: wrap;
+}
+.child{
+    height: 55vh;
+    width: 40vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.child img{
+    height: 100%;
+}
+#page4{
+    height: 50vh;
+    font-size: 15.4vw;
+    font-family: futura;
+    text-transform: uppercase;
+    line-height: 28vh;
+    letter-spacing: -5px;
+}
+.page5{
+   height: 50vh;
+    font-size: 2.4vw;
+    font-family: futura;
+    text-transform: uppercase;
+    line-height: 28vh;
+    letter-spacing: 5px;
+}
+
+@media (max-width:600px){
+    #page1{
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vh;
+        padding-top:25vh ;
+        background-color: #000000;
+    }
+    #page1 h1{
+        font-size: 15.5vw;
+        line-height: 14vh;
+        letter-spacing: -3px;
+    }
+    #video-container{
+        height: 25vh;
+        margin-top: 3vw;
+    }
+    #video-container #play{
+        padding: 7.5vw 9.2vw;
+        background-color: black;
+        color: #ffff;
+        font-size: 4.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-transform: uppercase;
+        font-family: futura;
+        border-radius: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+    }
+    #page2{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 5vw 3vw;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #000000;
+    
+    }
+    #page2 .elem{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 3vw;
+        
+    }
+   
+}
